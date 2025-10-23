@@ -18,4 +18,32 @@
                 [value]="projectTitle"
         />
     </div>
+    <div class="col-3">
+        <input  type="text" 
+                placeholder="type..."
+                [(ngModel)]="projectTitle"
+        />
+    </div>
+    <div class="col-3">
+        <p>{{selectedValue}} </p>
+       <label for="roleSelect">Choose an option:</label>
+        <select id="roleSelect" [(ngModel)]="selectedValue" title="Choose an option">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        </select>
+    </div>
+
+    <div class="col-3">
+    <button class="btn btn-info me-2" (click)="showWelcomeAlert()">click1</button>
+    </div>
+     <div class="col-3">
+    <button class="btn btn-danger me-2" (click)="alertWithParameter('Ronsell')">click2</button>
+    </div>
+     <div class="col-3">
+    <button class="btn btn-success" (click)="alertWithType(4)">click3</button>
+    </div>
+    <p>{{ addedNumber }}</p>
 </div>
+
+
