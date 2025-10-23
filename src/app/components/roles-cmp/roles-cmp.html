@@ -1,5 +1,21 @@
-<p>Role Works!</p>
-<p>{{ isActive }}</p>
-<p>{{ projectTitle }}</p>
-<p>{{ varSignal() }}</p>
-<p>&copy; {{currentDate.getFullYear()}}</p>
+<p>This is the role component template</p>
+<div class="row">
+    <div class="col-3">
+        <p>{{ projectTitle }}</p>
+    </div>
+    <div class="col-3">
+        <p>{{ projectVersion }}</p>
+    </div>
+    <div class="col-3">
+        <p>&copy; {{currentDate.getFullYear()}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <input  type="text" 
+                class="form-control" 
+                placeholder="Type something"
+                [value]="projectTitle"
+        />
+    </div>
+</div>
