@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RolesCmp } from './components/roles-cmp/roles-cmp';
+import { MasterCmp } from './components/master-cmp/master-cmp';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RolesCmp],
+  imports: [RouterOutlet, MasterCmp],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
