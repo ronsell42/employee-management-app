@@ -4,7 +4,7 @@
       <button
         type="button"
         class="btn"
-        [ngClass]="currentComponent === 'roles' ? 'btn-success' : 'btn-primary'"
+        [ngClass]="currentComponent === 'roles' ? 'btn-primary btn-lighted' : 'btn-primary'"
         (click)="clickedTab('roles')">
         Roles
       </button>
@@ -12,7 +12,7 @@
       <button
         type="button"
         class="btn"
-        [ngClass]="currentComponent === 'designation' ? 'btn-success' : 'btn-primary'"
+        [ngClass]="currentComponent === 'designation' ? 'btn-primary btn-lighted' : 'btn-primary'"
         (click)="clickedTab('designation')">
         Designation
       </button>
@@ -20,7 +20,7 @@
       <button
         type="button"
         class="btn"
-        [ngClass]="currentComponent === 'about' ? 'btn-success' : 'btn-primary'"
+        [ngClass]="currentComponent === 'about' ? 'btn-primary btn-lighted' : 'btn-primary'"
         (click)="clickedTab('about')">
         About
       </button>

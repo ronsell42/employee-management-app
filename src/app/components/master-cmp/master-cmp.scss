@@ -1,0 +1,9 @@
+.btn-lighted {
+  background-color: #5aa8ff !important; /* lighter blue than Bootstrap's #0d6efd */
+  color: #fff !important;
+  transition: background-color 0.2s ease;
+}
+
+.btn-lighted:hover {
+  background-color: #72b6ff !important; /* slightly lighter when hovered */
+}
