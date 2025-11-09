@@ -1,14 +1,25 @@
 <div class="row">
     <div class="col-12 text-center">
         <div class="btn-group">
-            <button type="button" class="btn btn-primary">Roles</button>
-            <button type="button" class="btn btn-primary">Designation</button>
+            <button type="button" class="btn btn-primary" (click)="clickedTab('roles')">Roles</button>
+            <button type="button" class="btn btn-primary" (click)="clickedTab('designation')">Designation</button>
+            <button type="button" class="btn btn-primary" (click)="clickedTab('about')">About</button>
         </div>
     </div>
 </div>
+
 <div class="row">
+  @if (currentComponent === 'roles') {
     <div class="col-12">
-        <app-roles-cmp></app-roles-cmp>
-        <app-designation-cmp></app-designation-cmp>
+      <app-roles-cmp></app-roles-cmp>
     </div>
+  } @else if (currentComponent === 'designation') {
+    <div class="col-12">
+      <app-designation-cmp></app-designation-cmp>
+    </div>
+  } @else {
+    <div class="col-12">
+      <app-about-component></app-about-component>
+    </div>
+  }
 </div>
