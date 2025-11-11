@@ -18,6 +18,8 @@ export class RolesCmp implements OnInit {
 
   getAllRoles(){
     console.log("Fetching all roles...");
-    this.http.get('https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllRoles').subscribe((res:any))
+    this.http.get('https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllRoles').subscribe((res:any)=>{
+      console.log("Roles fetched successfully:", res);
+    });
   }
 }
