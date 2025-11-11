@@ -62,7 +62,8 @@
               "buildTarget": "employee-management-app:build:production"
             },
             "development": {
-              "buildTarget": "employee-management-app:build:development"
+              "buildTarget": "employee-management-app:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
