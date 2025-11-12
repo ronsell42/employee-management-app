@@ -6,7 +6,7 @@ import { AboutComponent } from './components/about-component/about-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MasterCmp],
+  imports: [RouterOutlet, MasterCmp, RolesCmp],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

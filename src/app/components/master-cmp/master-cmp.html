@@ -28,18 +28,31 @@
   </div>
 </div>
 
+<p class="text-center mt-2">
+  Current: {{ currentComponent }}
+</p>
+
 <div class="row">
-  @if (currentComponent === 'roles') {
-    <div class="col-12">
-      <app-roles-cmp></app-roles-cmp>
-    </div>
-  } @else if (currentComponent === 'designation') {
-    <div class="col-12">
-      <app-designation-cmp></app-designation-cmp>
-    </div>
-  } @else {
-    <div class="col-12">
-      <app-about-component></app-about-component>
-    </div>
+  @switch (currentComponent) {
+    @case ('roles') {
+      <div class="col-12">
+        <app-roles-cmp></app-roles-cmp>
+      </div>
+    }
+    @case ('designation') {
+      <div class="col-12">
+        <app-designation-cmp></app-designation-cmp>
+      </div>
+    }
+    @case ('about') {
+      <div class="col-12">
+        <app-about-component></app-about-component>
+      </div>
+    }
+    @default {
+      <div class="col-12">
+        <app-roles-cmp></app-roles-cmp>
+      </div>
+    }
   }
 </div>

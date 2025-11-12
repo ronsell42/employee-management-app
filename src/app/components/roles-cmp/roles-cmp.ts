@@ -2,10 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit, signal, Signal } from '@angular/core';
 import { FormsModule, NonNullableFormBuilder } from '@angular/forms';
 import { IRole } from '../../model/interface/role';
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: 'app-roles-cmp',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './roles-cmp.html',
   styleUrl: './roles-cmp.scss'
 })
