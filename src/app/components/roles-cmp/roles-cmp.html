@@ -1,9 +1,17 @@
-
 <div class="row">
   <div class="col-4">
-    <ul>
-      @for (item of roleList; track $index) {
-        <li>{{ item.role }}</li>
-      }
-    </ul>
+
+    @if (roleList.length === 0) {
+      <p>No roles loaded yet. Retrying...</p>
+      <!-- Trigger a retry after a short delay -->
+      <ng-container *ngIf="retryFetch()"></ng-container>
+    } @else {
+      <ul>
+        @for (item of roleList; track $index) {
+          <li>{{ item.role }}</li>
+        }
+      </ul>
+    }
+
   </div>
+</div>
